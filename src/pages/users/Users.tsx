@@ -12,7 +12,7 @@ const columns: GridColDef[] = [
     field: "img",
     headerName: "Avatar",
     width: 100,
-    renderCell: (params) => {
+    renderCell: (params: { row: { img: any; }; }) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
   },
